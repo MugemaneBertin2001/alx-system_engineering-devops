@@ -1,0 +1,4 @@
+#!/bin/bash
+for directory in $(find . -type d); do 
+    chmod u+x,g+x,o+x "$directory"
+done
