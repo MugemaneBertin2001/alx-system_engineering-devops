@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Change the file permission of "hello"
+chmod o+rwx hello
+chmod g-rwx hello
+chmod u-rwx hello
+
+# Verify the new file permission
+ls -l hello
