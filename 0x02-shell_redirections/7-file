@@ -1,0 +1,4 @@
+#!/bin/bash
+touch "Best School"
+echo "Best school \n">"Best School"
+

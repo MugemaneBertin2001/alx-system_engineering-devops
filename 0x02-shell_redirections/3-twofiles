@@ -1,0 +1,3 @@
+#!/bin/bash
+nl etc/passwrd etc/hosts
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+#!/bin/bash
+
+
+
+# Find all the .js files in the current directory and its subdirectories
+
+find . -type f -name "*.js" -delete
+
+
