@@ -1,0 +1,41 @@
+#!/bin/bash
+
+
+
+# Read the list of words into an array
+
+mapfile -t words < /dev/stdin
+
+
+
+# Use an associative array to store the frequency of each word
+
+declare -A frequency
+
+for word in "${words[@]}"; do
+
+  frequency[$word]=$((frequency[$word] + 1))
+
+done
+
+
+
+# Sort the unique words
+
+sorted_words=$(echo "${!frequency[@]}" | tr ' ' '\n' | sort)
+
+
+
+# Print the words that appear only once
+
+for word in $sorted_words; do
+
+  if [ ${frequency[$word]} -eq 1 ]; then
+
+    echo $word
+
+  fi
+
+done
+
+

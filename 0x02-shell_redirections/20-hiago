@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+
+# Read input from standard input
+
+input=$(cat)
+
+
+
+# Use tr command to delete all occurrences of c and C
+
+output=$(echo "$input" | tr -d 'cC')
+
+
+
+# Print the output
+
+echo "$output"
+
+
+

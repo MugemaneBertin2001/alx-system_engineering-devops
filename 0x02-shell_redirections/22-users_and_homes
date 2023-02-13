@@ -1,0 +1,23 @@
+ead the contents of /etc/passwd file into a variable
+
+passwd_file=$(cat /etc/passwd)
+
+
+
+# Use awk to extract the username and home directory for each line in the passwd file
+
+users_and_homes=$(echo "$passwd_file" | awk -F: '{print $1 ":" $6}')
+
+
+
+# Sort the list of users and homes by username
+
+sorted_list=$(echo "$users_and_homes" | sort)
+
+
+
+# Print the sorted list of users and homes
+
+echo "$sorted_list"
+
+

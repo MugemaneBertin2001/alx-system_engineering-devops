@@ -1,0 +1,33 @@
+#!/bin/bash
+
+
+
+# Read input from standard input
+
+input=$(cat)
+
+
+
+# Use awk to extract the second field (host or IP) from each line of the input
+
+hosts=$(echo "$input" | awk '{print $2}')
+
+
+
+# Use sort and uniq to count the occurrences of each host or IP
+
+sorted_hosts=$(echo "$hosts" | sort | uniq -c | sort -nr)
+
+
+
+# Use awk to extract the first 11 lines of the sorted list of hosts
+
+top_11=$(echo "$sorted_hosts" | awk 'NR<=11{print $2}')
+
+
+
+# Print the top 11 hosts or IP addresses
+
+echo "$top_11"
+
+

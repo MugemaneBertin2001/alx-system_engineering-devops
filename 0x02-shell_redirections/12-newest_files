@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+
+# Get the list of files in the current directory
+
+files=$(ls)
+
+
+
+# Sort the files by modification time (newest first)
+
+sorted_files=$(ls -t $files)
+
+
+
+# Display the first 10 files
+
+counter=0
+
+for file in $sorted_files; do
+
+  echo $file
+
+  counter=$((counter + 1))
+
+  if [ $counter -eq 10 ]; then
+
+    break
+
+  fi
+
+done
+
+

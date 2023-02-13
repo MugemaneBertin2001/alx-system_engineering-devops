@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+
+# Read input from standard input
+
+input=$(cat)
+
+
+
+# Reverse the input using string manipulation
+
+output=$(echo "$input" | rev)
+
+
+
+# Print the output
+
+echo "$output"
+
+
