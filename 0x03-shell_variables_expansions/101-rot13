@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+
+# Read the input string from command line argument
+
+input=$1
+
+
+
+# Encode the input string using rot13
+
+encoded=$(echo $input | tr 'A-Za-z' 'N-ZA-Mn-za-m')
+
+
+
+# Decode the encoded string using rot13
+
+decoded=$(echo $encoded | tr 'A-Za-z' 'N-ZA-Mn-za-m')
+
+
+
+# Print the results
+
+echo "Original input: $input"
+
+echo "Encoded: $encoded"
+
+echo "Decoded: $decoded"
+
+
