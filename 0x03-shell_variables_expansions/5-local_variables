@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+
+# Print all local variables
+
+echo "Local variables:"
+
+set | grep "^[[:alpha:]_][[:alnum:]_]*="
+
+
+
+# Print all environment variables
+
+echo "Environment variables:"
+
+printenv
+
+
+
+# Print all functions
+
+echo "Functions:"
+
+declare -F | awk '{print $3}'
+
+
