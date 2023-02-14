@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+
+# Read the values of WATER and STIR from environment variables
+
+water=$WATER
+
+stir=$STIR
+
+
+
+# Convert WATER and STIR to base 10 using the 'bc' command
+
+water_base10=$(echo "ibase=$water; $water" | bc)
+
+stir_base10=$(echo "ibase=$stir; $stir" | bc)
+
+
+
+# Add the base-10 values together
+
+sum_base10=$(echo "$water_base10 + $stir_base10" | bc)
+
+
+
+# Convert the sum to base bestchol
+
+sum_bestchol=$(echo "obase=bestchol; $sum_base10" | bc)
+
+
+
+# Print the result
+
+echo "The sum of $water (base water) and $stir (base stir) is $sum_bestchol (base bestchol)"
+
+
