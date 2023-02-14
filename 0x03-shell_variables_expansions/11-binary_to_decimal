@@ -1,0 +1,16 @@
+nary number from the environment variable
+
+binary=$BINARY
+
+
+
+# Convert the binary number to decimal using the 'bc' command-line calculator
+
+decimal=$(echo "ibase=2; $binary" | bc)
+
+
+
+# Display the decimal number followed by a new line
+
+echo $decimal
+
