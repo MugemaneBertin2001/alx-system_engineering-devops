@@ -1,0 +1,9 @@
+import sys
+# Read input from standard input
+
+for i, line in enumerate(sys.stdin):
+
+    if i % 2 == 0:
+
+        print(line.rstrip())
+
