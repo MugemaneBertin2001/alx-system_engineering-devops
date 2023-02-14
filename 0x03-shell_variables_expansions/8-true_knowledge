@@ -1,2 +1,4 @@
 #!/bin/bash
-echo 128+$(128-1) 
+true_knowledge=$TRUEKNOWLEDGE
+result=$((128 + true_knowledge))
+echo $resul
