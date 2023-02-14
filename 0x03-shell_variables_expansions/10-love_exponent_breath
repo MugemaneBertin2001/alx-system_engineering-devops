@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+
+# Get the values of the BREATH and LOVE environment variables
+
+breath=$BREATH
+
+love=$LOVE
+
+
+
+# Perform the power operation and store the result in a variable named "result"
+
+result=$(bc <<< "scale=2; $breath ^ $love")
+
+
+
+# Print the result followed by a new line
+
+echo $result
+
+
