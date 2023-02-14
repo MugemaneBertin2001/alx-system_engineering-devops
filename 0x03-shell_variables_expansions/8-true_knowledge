@@ -1,3 +1,2 @@
 #!/bin/bash
-true_knowledge=$TRUEKNOWLEDGE
 echo 128
