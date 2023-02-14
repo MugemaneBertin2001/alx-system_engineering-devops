@@ -1,17 +1,2 @@
 #!/bin/bash
-
-
-
-# Split the PATH variable into an array using the ":" separator
-
-IFS=: read -a directories <<< "$PATH"
-
-
-
-# Count the number of directories in the array
-
-num_directories=${#directories[@]}
-
-
-
-echo "There are $num_directories directories in the PATH"
+IFS=: read -a directories <<< "$PATH"; num_directories=${#directories[@]}; echo "There are $num_directories directories in the PATH"
