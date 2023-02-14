@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+
+# Get the values of the POWER and DIVIDE environment variables
+
+power=$POWER
+
+divide=$DIVIDE
+
+
+
+# Perform the division operation and store the result in a variable named "result"
+
+result=$(bc <<< "scale=2; $power / $divide")
+
+
+
+# Print the result followed by a new line
+
+echo $result
+
+
