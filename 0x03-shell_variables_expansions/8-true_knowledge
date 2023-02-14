@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+
+# get the value of the TRUEKNOWLEDGE environment variable
+
+true_knowledge=$TRUEKNOWLEDGE
+
+
+
+# calculate the result of adding 128 to true_knowledge
+
+result=$((128 + true_knowledge))
+
+
+
+# print the result followed by a new line
+
+echo $result
+
+
